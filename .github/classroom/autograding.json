@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "Configuration: Constructor",
+      "setup": "",
+      "run": "gradle test --tests ConfigurationTest.constructor*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "Configuration: getCoordinates",
+      "setup": "",
+      "run": "gradle test --tests ConfigurationTest.getCoordinates*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "Configuration: Borders",
+      "setup": "",
+      "run": "gradle test --tests ConfigurationTest.*Border*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "FormatException: getLine",
+      "setup": "",
+      "run": "gradle test --tests FormatExceptionTest.getLine",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "FormatException: getError",
+      "setup": "",
+      "run": "gradle test --tests FormatExceptionTest.getError",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "FormatException: getMessage",
+      "setup": "",
+      "run": "gradle test --tests FormatExceptionTest.getMessage",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "LFAImage: Constructor",
+      "setup": "",
+      "run": "gradle test --tests LFAImageTest.constructor*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "LFAImage: getAverage",
+      "setup": "",
+      "run": "gradle test --tests LFAImageTest.getAverage*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    },
+    {
+      "name": "LFAImage: getCorrectedAverage",
+      "setup": "",
+      "run": "gradle test --tests LFAImageTest.getCorrected*",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 10
+    }
+  ]
+}
