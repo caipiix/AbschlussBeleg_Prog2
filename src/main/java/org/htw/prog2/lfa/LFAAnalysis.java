@@ -7,5 +7,7 @@ import java.io.File;
 public class LFAAnalysis {
 
     public static void main(String[] args) {
+        MainFrame gui = new MainFrame();
+        gui.setVisible(true);
     }
 }
