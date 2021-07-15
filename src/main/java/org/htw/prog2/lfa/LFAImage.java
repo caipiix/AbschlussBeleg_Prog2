@@ -9,8 +9,7 @@ import java.util.Arrays;
 
 public class LFAImage {
 
-    private BufferedImage img;
-    private double sum;
+    private final BufferedImage img;
 
     public LFAImage(File imagefile) throws IOException {
         try{
@@ -21,7 +20,7 @@ public class LFAImage {
         }
     }
 
-    public static int[] checkCoords(int[] coords){
+    public static void checkCoords(int[] coords){
         if(coords.length == 4){
             for(int i = 0; i < coords.length; i++){
                 if(coords[i] < 0){
@@ -29,9 +28,8 @@ public class LFAImage {
               }
             }
         }else{
-            throw new ArrayIndexOutOfBoundsException("array length !4 wrong coordinateform");
+            throw new ArrayIndexOutOfBoundsException("array length !4 wrong form of coordinates");
         }
-        return coords;
     }
 
     public double getAverageIntensity(int[] coords) {
@@ -57,8 +55,7 @@ public class LFAImage {
                 }
             }
             int num = (w + 1) * (h + 1);
-            sum = (256 - (sumr / num)) + (256 - (sumg / num)) + (256 - (sumb / num));
-        return sum;
+        return (256 - (sumr / num)) + (256 - (sumg / num)) + (256 - (sumb / num));
     }
 
 
