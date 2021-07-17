@@ -31,7 +31,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         BorderLayout layout = new BorderLayout();
         setLayout(layout);
-        setSize(250,150);
+        setSize(275,150);
 
 
         initMenuBar();
@@ -89,7 +89,6 @@ public class MainFrame extends JFrame {
                 }
             }
         });
-
         exit.addActionListener(e -> System.exit(0));
     }
 
@@ -99,6 +98,7 @@ public class MainFrame extends JFrame {
 
         JPanel tb = new JPanel();
         tb.setLayout(new GridBagLayout());
+        tb.setSize(250,this.getHeight());
         GridBagConstraints c = new GridBagConstraints();
 
 

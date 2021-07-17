@@ -62,6 +62,9 @@ public class ImagePanel extends JPanel {
             g.drawImage(img.getImage(), x, y, 31, 78, this);
         } else if (img == null) {
             if (config.isBorderEnabled()) {
+                g.setColor(Color.WHITE);
+                g.fillRect(x, y, 31, 78);
+
                 g.setColor(Color.BLUE);
                 int[] configu = config.getControlCoordinates();
                 int[] testu = config.getTestCoordinates();
@@ -70,6 +73,7 @@ public class ImagePanel extends JPanel {
                 g.drawRect(x + configu[0], y + configu[1], (configu[2] - configu[0]), (configu[3] - configu[1]));
 
                 // Above Configuration
+                g.setColor(Color.BLACK);
                 int[] aboveconfig = Arrays.copyOf(configu, configu.length);
                 reformCoordsTop(aboveconfig);
                 g.drawRect(x + aboveconfig[0], y + aboveconfig[1], aboveconfig[2] - aboveconfig[0], aboveconfig[3] - aboveconfig[1]);
@@ -93,6 +97,9 @@ public class ImagePanel extends JPanel {
                 g.drawRect(x + underneathtest[0], y + underneathtest[1], underneathtest[2] - underneathtest[0], underneathtest[3] - underneathtest[1]);
 
             } else {
+                g.setColor(Color.WHITE);
+                g.fillRect(x, y, 31, 78);
+
                 g.setColor(Color.BLUE);
                 int[] configu = config.getControlCoordinates();
                 int[] testu = config.getTestCoordinates();
@@ -101,6 +108,9 @@ public class ImagePanel extends JPanel {
             }
         } else {
             if (config.isBorderEnabled()) {
+                g.setColor(Color.WHITE);
+                g.fillRect(x, y, 31, 78);
+
                 g.setColor(Color.BLUE);
                 int[] configu = config.getControlCoordinates();
                 int[] testu = config.getTestCoordinates();
@@ -110,6 +120,7 @@ public class ImagePanel extends JPanel {
                 g.drawRect(x + configu[0], y + configu[1], (configu[2] - configu[0]), (configu[3] - configu[1]));
 
                 // Above Configuration
+                g.setColor(Color.BLACK);
                 int[] aboveconfig = Arrays.copyOf(configu, configu.length);
                 reformCoordsTop(aboveconfig);
                 g.drawRect(x + aboveconfig[0], y + aboveconfig[1], aboveconfig[2] - aboveconfig[0], aboveconfig[3] - aboveconfig[1]);
@@ -134,6 +145,9 @@ public class ImagePanel extends JPanel {
 
 
             } else {
+                g.setColor(Color.WHITE);
+                g.fillRect(x, y, 31, 78);
+
                 g.setColor(Color.BLUE);
                 int[] configu = config.getControlCoordinates();
                 int[] testu = config.getTestCoordinates();
