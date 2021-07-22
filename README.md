@@ -152,7 +152,18 @@ Wie in den Hausaufgaben gibt es für das GUI keine automatisierten Tests. Ersetz
 Verwenden Sie dabei **die Datei LFA-1.png**! Beschreiben Sie hier kurz, ob wieso sich das Ergebnis der Berechnung (positiv/negativ) bei dieser Datei verändert, wenn die Hintergrundkorrektur ein- bzw. ausgeschaltet wird (dafür gibt es auch **5 Punkte**, also bitte nicht übersehen):
 
 ```text
-Das Ergebnis der Berechnung auf der Datei LFA-1.png <IHR TEXT HIER>
+Das Ergebnis der Berechnung auf der Datei LFA-1.png <
+Der Test, ohne Backgroundcorrection, ist in unserem Fall Falsch-Positiv da der Covid-Test auf unserem Bild eine milchige Hintergrundfarbe hat, 
+welche auch eine Intensität erzeugt und über unserem Cutoff liegt. 
+Wenn wir nun jedoch die Background correction aktivieren, 
+werden zu dem jeweiligen Test- und Korrekturstreifen unseres Hauptbereichs* noch die durchschnittlichen Intensitäten von ausgewählten Nebenbereichen** unter und über unserem Test- und Korrekturstreifen zusammen addiert und vom Hauptbereich subtrahiert. 
+So kann davon ausgegangen werden, dass wir die Intensität der milchigen Hintergrundfarbe aus unserer Gleichung im Hauptbereich eliminiert haben. Weshalb der Test danach auch Korrekt als Negativ erkannt wird.
+  
+Außerdem wäre eine Backgroundcorrection überflüssig, wenn die Covid-Tests auf einem weißen Hintergrund(255/255/255) gemacht worden wären und bei einem Intensity Ratio Wert von 1.0 wäre die durchschnittliche Intensität der beiden Hauptbereiche Identisch.
+
+
+* in unserem Programm sind diese Bereiche durch ein blaues Rechteck gekennzeichnet.
+** in unserem Programm durch Schwarze Rechtecke gekennzeichnet. >
 ```
 
 #### Lösung: Frisch geöffnetes Programm
